@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Embedded Page</title>
+  <style>
+    /* Full-bleed responsive iframe with simple loader */
+    html,body { height:100%; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:#f6f7fb; }
+    .wrap { height:100%; display:flex; flex-direction:column; }
+    header { padding:12px 16px; background:#0b5fff; color:white; display:flex; align-items:center; gap:12px; }
+    header .title { font-weight:600; font-size:16px; }
+    .iframe-area { flex:1; display:flex; min-height:0; }
+    iframe { border:0; width:100%; height:100%; background:white; }
+    .notice { font-size:13px; opacity:0.9; }
+
+    /* hidden badge */
+    .badge {
+      display: none;
+    }
+
+    @media (max-width:520px){
+      header .title { font-size:15px }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- <header>
+      <div class="title">Embedded site</div>
+      <div class="notice">If you want to replace the link, change the <code>src</code> in the iframe below.</div>
+    </header> -->
+
+    <div class="iframe-area">
+      <!-- REPLACE the src value below with your link -->
+      <iframe
+        id="embeddedFrame"
+        src="https://medical-conference-m-fh0v.bolt.host/"
+        title="Embedded Content"
+        sandbox="allow-same-origin allow-scripts allow-forms allow-popups" 
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</body>
+</html>
